@@ -39,6 +39,7 @@ public class Num25556 {
         Stack stack03 = new Stack();
         Stack stack04 = new Stack();
 
+
         for(int i=0; i<n; i++){
             if(stack01.empty() || (int)stack01.peek() < permutation[i]){
                 stack01.push(permutation[i]);
