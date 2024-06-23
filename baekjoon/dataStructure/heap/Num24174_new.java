@@ -53,7 +53,9 @@ class Solution{
         } else{
             return;
         }
-        // 최소 힙 성질을 만족하지 못하는 경우 재귀적으로 수정
+        // arr[node]를 루트로 하는 트리를 최소 힙 성질을 만족하도록 수정한다.
+        // arr[node]의 두 자식을 루트로 하는 서브 트리는 최소 힙 성질을 만족하고 있다.
+        // n은 배열 arr의 전체 크기이며 최대 인덱스를 나타낸다.
         if(arr[smaller] < arr[node]){
             swap(arr, smaller, node);
             // smaller가 루트노드가 되어 재귀함수 실행
