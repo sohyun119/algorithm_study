@@ -26,12 +26,12 @@ public class Num2830_runtimeError {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        Solution sol = new Solution();
+        Solution01 sol = new Solution01();
         System.out.println(sol.solution(arr));
 
     }
 }
-class Solution{
+class Solution01{
     public String toBinary(int n){
         String result = "";
         while(n > 0){
