@@ -6,11 +6,9 @@ import java.util.StringTokenizer;
 
 public class Num1920_수찾기 {
 
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter((new OutputStreamWriter(System.out)));
 
         int n = Integer.parseInt(br.readLine());
         int[] arr1 = new int[n];
@@ -28,15 +26,13 @@ public class Num1920_수찾기 {
         Arrays.sort(arr1);
         for(int i=0; i<m; i++){
             int num = arr2[i];
-            boolean result = binarySerch(0, n, num, arr1);
+            boolean result = binarySerch(0, n-1, num, arr1);
             if(result){
                 System.out.println(1);
             }else{
                 System.out.println(0);
-                //bw.write(0);
             }
         }
-        bw.close();
 
 
     }
@@ -49,7 +45,7 @@ public class Num1920_수찾기 {
         else if(arr1[mid] == num){
             return true;
         }else if(arr1[mid] < num){
-            return binarySerch(mid+1, last-1, num, arr1);
+            return binarySerch(mid+1, last, num, arr1);
         }else{
             return binarySerch(first, mid-1, num, arr1);
         }
